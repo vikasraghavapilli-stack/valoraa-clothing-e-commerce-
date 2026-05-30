@@ -1,0 +1,249 @@
+<!-- admin.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VALORAA Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="../css/admin.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <h2>VALORAA</h2>
+
+    </div>
+
+    <ul>
+
+        <li class="active">
+            <a href="#">
+                <i class="fa-solid fa-chart-line"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="#products">
+                <i class="fa-solid fa-box-open"></i>
+                Products
+            </a>
+        </li>
+
+        <li>
+            <a href="orders.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Orders
+            </a>
+        </li>
+
+        <li>
+            <a href="users.html">
+                <i class="fa-solid fa-users"></i>
+                Users
+            </a>
+        </li>
+
+        <li>
+            <a href="reports.html">
+                <i class="fa-solid fa-chart-pie"></i>
+                Reports
+            </a>
+        </li>
+
+        <li>
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+        </li>
+
+        <li>
+            <a href="#" onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+
+<div class="main-content">
+
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+        <div>
+
+            <h1>Dashboard</h1>
+
+            <p>Welcome Back Admin 👋</p>
+
+        </div>
+
+        <div class="topbar-right">
+
+            <input type="text"
+                   placeholder="Search...">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <img src="https://i.pravatar.cc/40"
+                 alt="Admin">
+
+        </div>
+
+    </div>
+
+
+    <!-- DASHBOARD CARDS -->
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div>
+
+                <h3>Total Products</h3>
+
+                <h1 id="productCount">0</h1>
+
+            </div>
+
+            <i class="fa-solid fa-box"></i>
+
+        </div>
+
+
+        <div class="card">
+
+            <div>
+
+                <h3>Total Orders</h3>
+
+                <h1 id="orderCount">0</h1>
+
+            </div>
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+        </div>
+
+
+        <div class="card">
+
+            <div>
+
+                <h3>Total Users</h3>
+
+                <h1 id="userCount">0</h1>
+
+            </div>
+
+            <i class="fa-solid fa-users"></i>
+
+        </div>
+
+
+        <div class="card">
+
+            <div>
+
+                <h3>Revenue</h3>
+
+                <h1 id="revenueCount">₹0</h1>
+
+            </div>
+
+            <i class="fa-solid fa-wallet"></i>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCTS SECTION -->
+
+    <div class="products-section" id="products">
+
+        <div class="section-header">
+
+            <h2>Products</h2>
+
+            <button id="showFormBtn">
+                + Add Product
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCT FORM -->
+
+        <form id="productForm">
+
+            <input type="text"
+                   id="name"
+                   placeholder="Product Name"
+                   required>
+
+            <input type="text"
+                   id="category"
+                   placeholder="Category"
+                   required>
+
+            <input type="number"
+                   id="price"
+                   placeholder="Price"
+                   required>
+
+            <input type="text"
+                   id="imageUrl"
+                   placeholder="Image URL"
+                   required>
+
+            <button type="submit">
+                Save Product
+            </button>
+
+        </form>
+
+
+        <!-- PRODUCT CARDS -->
+
+        <div class="product-grid"
+             id="productTable">
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../javascript/admin.js"></script>
+
+</body>
+</html>
