@@ -57,16 +57,3 @@ bash
 
 
 
-##  Folder Structure
-valoraa-clothing-e-commerce/
-├── frontend/         # HTML, CSS, JavaScript files
-└── backend/          # Spring Boot application
-├── src/
-│   ├── main/
-│   │   ├── java/com/valoraa/backend/
-│   │   │   ├── controller/
-│   │   │   ├── model/
-│   │   │   ├── repository/
-│   │   │   └── service/
-│   │   └── resources/
-└── pom.xml
